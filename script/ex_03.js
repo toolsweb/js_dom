@@ -6,7 +6,6 @@ window.onload = function() {
         var name = prompt("Quel est votre nom ?");
         name ? showConfirmModal(name) : showPromptModal();
     }
-
     function showConfirmModal(name) {
         var valid = confirm("Etes vous sûr que " + name + " est votre nom ?");
         valid ? writeResponse(name) : showPromptModal();
