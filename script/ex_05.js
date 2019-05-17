@@ -10,17 +10,17 @@ window.onload = function() {
     }
 
     function increaseFontSize() {
-        wrapper.style.fontSize = "" + (getFontSize() + 1) + "px"
+        wrapper.style.fontSize = (getFontSize() + 1) + "px"
     }
 
-    function decreaseFontSize(){
-        wrapper.style.fontSize = "" + (getFontSize() - 1) + "px"
+    function decreaseFontSize() {
+        wrapper.style.fontSize = (getFontSize() - 1) + "px"
     }
 
     plus.addEventListener("click", increaseFontSize);
     moins.addEventListener("click", decreaseFontSize);
 
-    color.addEventListener("change", function(){
+    color.addEventListener("change", function() {
         document.body.style.backgroundColor = this.value;
     });
 }

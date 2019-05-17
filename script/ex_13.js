@@ -1,16 +1,14 @@
 window.onload = function() {
     var Module = function() { 
-        var self = {};
+        var self = {}; //declare object.
         self.div =  document.getElementsByTagName("div")[2];
-        self.img = null;
         self.temps = null;
         function init ()
         {
             if (localStorage.getItem("Pangolin") !== null) {
-                self.img = document.createElement("img");
-                self.img.src = localStorage.getItem("Pangolin");
+                var img = document.createElement("img");
+                img.src = localStorage.getItem("Pangolin");
                 self.div.appendChild(self.img);
-                self.temps;
                 self.width = window.getComputedStyle(self.div.firstElementChild, null).getPropertyValue("width");
                 self.height = window.getComputedStyle(self.div.firstElementChild, null).getPropertyValue("height");
                 self.wtmp = self.width;
@@ -56,11 +54,9 @@ window.onload = function() {
             {
                 self.div.firstElementChild.onmouseenter = () => {
                     clearInterval(self.temps);
-                    self.temps = setInterval(() =>{
+                    self.temps = setInterval(() => {
                         self.enter();
-                    }
-                        , 1000);
-
+                    }, 1000);
                 }
                 self.div.firstElementChild.onmouseleave = () => {
                         clearInterval(self.temps);
@@ -75,10 +71,9 @@ window.onload = function() {
             }}
         }
         return {
-            init: init,
+            init: init, // return publics functions
         }
     }
-
     var instance = new Module();
     instance.init();
 }; 
