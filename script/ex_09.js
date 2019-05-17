@@ -24,7 +24,7 @@ window.onload = function() {
         cx += postionX - e.pageX;
         cy += postionY - e.pageY;
         canvas.style.bottom = cy + "px";	
-        canvas.style.right = cx+"px";
+        canvas.style.right = cx + "px";
     });
     lorem.addEventListener('dragend', function(e) {
         e.preventDefault(); 

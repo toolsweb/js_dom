@@ -12,7 +12,7 @@ window.onload = function () {
         var dataURL = canvas.toDataURL("image/jpeg");
         return dataURL;
     }
-    img.addEventListener("load", function(){
+    img.addEventListener("load", function() {
         if (localStorage.getItem("Pangolin") === null) {
             localStorage.setItem("Pangolin",
             getBase64Image(img));

@@ -5,11 +5,11 @@ window.onload = function() {
     var color = document.querySelector("select");
     var wrapper = document.querySelector(".wrapper");
 
-    function getFontSize(){
+    function getFontSize() {
         return parseInt(getComputedStyle(wrapper).fontSize);
     }
 
-    function increaseFontSize(){
+    function increaseFontSize() {
         wrapper.style.fontSize = "" + (getFontSize() + 1) + "px"
     }
 
